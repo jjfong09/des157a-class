@@ -21,13 +21,31 @@ h1, h2, h3, p, ul, ol{
 /* END RESET */
 
 
+h1{
+	margin-bottom: 4px;
+	font-weight: 300;
+	font-size: 3em;
+}
+
+p{
+	color: #808B9B;
+}
+
 header{
+	/* display: flex;
+	flex-direction: column; */
 	text-align: center;
+	justify-content: center;
+}
+
+#eyebrow{
+	font-family: "Caveat",serif;
+	color: #067CFF;
 }
 
 body{
 	background-color: #F7F7F7;
-	margin: 60px 60px;
+	margin: 24px 60px;
 }
 
 
@@ -36,6 +54,8 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 18px;
+	margin-bottom: 36px;
 }
 
 #projects-tag{
@@ -54,17 +74,19 @@ body{
 	width: auto;
 }
 
-#all-cards{
+#card-container{
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	gap: 10px
+	gap: 36px;
+	flex-wrap: wrap;
 }
 
 /* card styles */
 svg {
 	width: 20px;
 	height: 20px;
+	transition: transform 200ms ease-in-out;
 }
 
 .card{
@@ -73,6 +95,15 @@ svg {
 	padding: 36px;
 	border: #D3D8DF solid 1px;
 	flex-grow: 1;
+	transition: 200ms ease-in-out;
+}
+
+.card:hover{
+	scale: 1.04;
+	box-shadow: 
+	-webkit-box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
+	-moz-box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
+	box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
 }
 
 .card-content{
@@ -83,12 +114,87 @@ svg {
 
 .card-list-item{
 	color: #808B9B;
-	transition: 1s ease;
+	transition: color 300ms ease;
 	display: flex;
 	flex-direction: row;
 	gap: 8px;
 }
 
 .card-list-item:hover{
-	color: #0244a9;
+	color: #6aa4fc;
+	cursor: pointer;
+}
+
+.card-list-item:hover p{
+	color: #6aa4fc;
+}
+
+.card-list-item:hover svg {
+	transform: rotate(45deg);
+}
+
+/* images */
+#image1 {
+	background-image: url("images/config.jpg");
+	margin-right: 16px;
+	box-shadow: 
+		-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+}
+
+#image2 {
+	background-image: url("images/config.jpg");
+	margin-right: 16px;
+	box-shadow: 
+		-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+}
+
+#image3 {
+	background-image: url("images/ucdavis.jpg");
+	margin-right: 16px;
+	box-shadow: 
+		-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+		box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+}
+
+#banner {
+	display: flex;
+	max-width: 800px;
+	height: 250px;
+	margin: 48px auto 48px auto;
+	flex-wrap: wrap;
+	/* overflow: hidden; */
+}
+
+#banner div {
+	flex: 1;
+	background-position: center;
+	transition: all 1s;
+	border-radius: 16px;
+}
+
+#banner div:hover {
+	flex: 4;
+}
+
+footer{
+	text-align: center;
+}
+
+footer p{
+	font-size: 0.75em;
+	color: #B0BAC8;
+}
+
+#contact-link:hover{
+	cursor: pointer;
+}
+
+#footer-text{
+	display: inline-flex;
+	gap: 24px;
 }
