@@ -1,4 +1,4 @@
-/* css reset */
+/* CSS RESET*/
 *{
 	box-sizing: border-box;
 }
@@ -14,8 +14,81 @@ img{
 }
 
 h1, h2, h3, p, ul, ol{
+	font-family: "Manrope",serif;
 	margin: 0;
 	padding: 0;
 }
-/* end reset */
+/* END RESET */
 
+
+header{
+	text-align: center;
+}
+
+body{
+	background-color: #F7F7F7;
+	margin: 60px 60px;
+}
+
+
+/* projects section */
+#projects-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#projects-tag{
+	display: inline-block;
+	width: auto;
+	color: #007AFF;
+	text-align: center;
+	background-color: #F2F7FF;
+	border: #067CFF solid 1px;
+	border-radius: 60px;
+	padding: 4px 0px;
+}
+
+#projects-tag p{
+	display: inline-block;
+	width: auto;
+}
+
+#all-cards{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px
+}
+
+/* card styles */
+svg {
+	width: 20px;
+	height: 20px;
+}
+
+.card{
+	background-color: white;
+	border-radius: 12px;
+	padding: 36px;
+	border: #D3D8DF solid 1px;
+	flex-grow: 1;
+}
+
+.card-content{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.card-list-item{
+	color: #808B9B;
+	transition: 1s ease;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.card-list-item:hover{
+	color: #0244a9;
+}
