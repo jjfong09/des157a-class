@@ -13,7 +13,7 @@ img{
 	display: block;
 }
 
-h1, h2, h3, p, ul, ol{
+h1, h2, h3, p, ul, ol, a{
 	font-family: "Manrope",serif;
 	margin: 0;
 	padding: 0;
@@ -22,6 +22,7 @@ h1, h2, h3, p, ul, ol{
 
 
 h1{
+	margin-top: 16px;
 	margin-bottom: 4px;
 	font-weight: 300;
 	font-size: 3em;
@@ -29,6 +30,12 @@ h1{
 
 p{
 	color: #808B9B;
+	font-size: 1em;
+}
+
+a{
+	color: #808B9B;
+	text-decoration: none;
 }
 
 header{
@@ -38,14 +45,16 @@ header{
 	justify-content: center;
 }
 
-#eyebrow{
+#cursive-tag{
+	font-size: 1.4em;
 	font-family: "Caveat",serif;
 	color: #067CFF;
+	padding: 6px;
 }
 
 body{
 	background-color: #F7F7F7;
-	margin: 24px 60px;
+	margin: 0px 60px;
 }
 
 
@@ -55,14 +64,16 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	gap: 18px;
-	margin-bottom: 36px;
+	max-width: 1100px;
+	margin: auto;
+	margin-bottom: 24px;
+
 }
 
 #projects-tag{
 	display: inline-block;
 	width: auto;
 	margin: auto;
-	color: #007AFF;
 	text-align: center;
 	background-color: #F2F7FF;
 	border: #067CFF solid 1px;
@@ -71,6 +82,11 @@ body{
 }
 
 #projects-tag p{
+	color: #007AFF;
+}
+
+#projects-tag a{
+	color: #007AFF;
 	font-size: 0.8em;
 	display: inline-block;
 	width: auto;
@@ -98,6 +114,7 @@ svg {
 	border: #D3D8DF solid 1px;
 	flex-grow: 1;
 	transition: 200ms ease-in-out;
+	width: 200px;
 }
 
 .card:hover{
@@ -121,30 +138,31 @@ svg {
 	gap: 8px;
 }
 
-.card-list-item:hover{
-	color: #6aa4fc;
-	cursor: pointer;
+.card-list li {
+	margin-bottom: 18px;
 }
 
-.card-list-item:hover p{
+.card-list-item:hover a{
 	color: #6aa4fc;
 }
 
 .card-list-item:hover svg {
+	color: #6aa4fc;
 	transform: rotate(45deg);
 }
 
 /* images */
 #image1 {
-	background-image: url("images/config.jpg");
+	background-image: url("images/cherryblososm.png");
 	margin-right: 16px;
 	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
 	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
 	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	background-repeat: no-repeat;
 }
 
 #image2 {
-	background-image: url("images/config.jpg");
+	background-image: url("images/fishing.png");
 	margin-right: 16px;
 	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
 	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
@@ -152,7 +170,16 @@ svg {
 }
 
 #image3 {
-	background-image: url("images/ucdavis.jpg");
+	background-image: url("images/walking.png");
+	margin-right: 16px;
+	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	background-repeat: no-repeat;
+}
+
+#image4 {
+	background-image: url("images/rose.png");
 	margin-right: 16px;
 	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
 	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
@@ -161,10 +188,10 @@ svg {
 
 #banner {
 	display: flex;
-	/* max-width: 800px; */
-	width: auto;
+	max-width: 1100px;
+	/* width: auto; */
 	height: 250px;
-	margin: 48px auto 48px auto;
+	margin: 26px auto 48px auto;
 	flex-wrap: wrap;
 	/* overflow: hidden; */
 }
@@ -177,16 +204,21 @@ svg {
 }
 
 #banner div:hover {
-	flex: 4;
+	flex: 2;
 }
 
 footer{
 	text-align: center;
 }
 
-footer p{
+footer p,footer a{
 	font-size: 0.75em;
-	color: #B0BAC8;
+	color: #98a2af;
+}
+
+
+#contact-link:hover{
+
 }
 
 #contact-link:hover{
