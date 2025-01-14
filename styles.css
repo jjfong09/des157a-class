@@ -22,11 +22,14 @@ h1, h2, h3, p, ul, ol, a{
 
 
 h1{
+	color: #393D42;
 	margin-top: 16px;
 	margin-bottom: 4px;
 	font-weight: 300;
 	font-size: 3em;
 }
+
+h2 { color: #393D42}
 
 p{
 	color: #808B9B;
@@ -39,17 +42,47 @@ a{
 }
 
 header{
-	/* display: flex;
-	flex-direction: column; */
 	text-align: center;
 	justify-content: center;
+}
+
+#header-container{ 
+	display: inline-block;
+	overflow: visible;
+}
+
+/* typing animation */
+#header-container h1{
+	margin-top: 24px;
+	border-right: 2.5px solid;
+	height: 60px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: 
+		typing 4s steps(8) infinite,
+		cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+	50% {border-color: transparent}
+}
+
+@keyframes typing {
+	0% {width:0}
+
+	50% {width: 100%;}
+
+	80% {width: 100%;}
+
+	100% {width: 0;}
 }
 
 #cursive-tag{
 	font-size: 1.4em;
 	font-family: "Caveat",serif;
 	color: #067CFF;
-	padding: 6px;
+	padding: 2px;
 }
 
 body{
@@ -85,13 +118,6 @@ body{
 	color: #007AFF;
 }
 
-#projects-tag a{
-	color: #007AFF;
-	font-size: 0.8em;
-	display: inline-block;
-	width: auto;
-}
-
 #card-container{
 	display: flex;
 	justify-content: center;
@@ -119,9 +145,7 @@ svg {
 
 .card:hover{
 	scale: 1.04;
-	-webkit-box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
-	-moz-box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
-	box-shadow: 3px 15px 28px 7px rgba(0,0,0,0.08);
+	box-shadow: 3px 15px 28px 7px rgba(0, 0, 0, 0.08);
 }
 
 .card-content{
@@ -155,35 +179,26 @@ svg {
 #image1 {
 	background-image: url("images/cherryblososm.png");
 	margin-right: 16px;
-	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
 	background-repeat: no-repeat;
 }
 
 #image2 {
 	background-image: url("images/fishing.png");
 	margin-right: 16px;
-	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
 }
 
 #image3 {
 	background-image: url("images/walking.png");
 	margin-right: 16px;
-	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	background-repeat: no-repeat;
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
 }
 
 #image4 {
 	background-image: url("images/rose.png");
 	margin-right: 16px;
-	-webkit-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	-moz-box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
-	box-shadow: 3px 18px 33px 0px rgba(0,0,0,0.26);
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
 }
 
 #banner {
