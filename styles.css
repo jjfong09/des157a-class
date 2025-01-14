@@ -216,15 +216,6 @@ footer p,footer a{
 	color: #98a2af;
 }
 
-
-#contact-link:hover{
-
-}
-
-#contact-link:hover{
-	cursor: pointer;
-}
-
 #footer-text{
 	display: inline-flex;
 	gap: 24px;
