@@ -29,7 +29,10 @@ h1{
 	font-size: 3em;
 }
 
-h2 { color: #393D42}
+h2{ 
+	color: #393D42;
+	font-weight: 600;
+}
 
 p{
 	color: #808B9B;
@@ -234,4 +237,10 @@ footer p,footer a{
 #footer-text{
 	display: inline-flex;
 	gap: 24px;
+}
+
+@media (max-width: 768px) {
+    #banner div:hover {
+		flex: 6;
+	}
 }
