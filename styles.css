@@ -29,6 +29,11 @@ h1{
 	font-size: 3em;
 }
 
+header h2 {
+	font-size: 1em;
+	font-weight: 300;
+}
+
 h2{ 
 	color: #393D42;
 	font-weight: 600;
@@ -158,11 +163,15 @@ svg {
 }
 
 .card-list-item{
-	color: #808B9B;
+	color: #6aa4fc; 
 	transition: color 300ms ease;
 	display: flex;
 	flex-direction: row;
 	gap: 8px;
+}
+
+.card-list-item a{
+	color: #586476;
 }
 
 .card-list li {
@@ -231,7 +240,7 @@ footer{
 
 footer p,footer a{
 	font-size: 0.75em;
-	color: #98a2af;
+	color: #586476;
 }
 
 #footer-text{
