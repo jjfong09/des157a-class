@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+
+	<h1>Mood Reporter</h1>
+	<p id="mood-report">Let us know how you are feeling today.</p>
+
+
+    <script>
+		// this program recieves user input on their mood and displays a message based on their response
+
+		function getUserMood(){
+			var userMood = prompt("How are you feeling today? (e.g happy, sad, angry, frustrated, etc.)");
+			return userMood.toLowerCase();
+		}
+
+		function displayUserMood(userMood){
+			switch(userMood){
+				case "happy":
+					document.querySelector("#mood-report").innerHTML = "I'm glad to hear that you're feeling happy!";
+					break;
+				case "sad":
+					document.querySelector("#mood-report").innerHTML = "I'm sorry to hear that you're feeling sad!";
+					break;
+				case "angry":
+					document.querySelector("#mood-report").innerHTML = "I'm sorry to hear that you're feeling angry!";
+					break;
+				case "frustrated":
+					document.querySelector("#mood-report").innerHTML = "I'm sorry to hear that you're feeling frustrated!";
+					break;
+				case "excited":
+					document.querySelector("#mood-report").innerHTML = "I'm glad to hear that you're feeling excited!";
+					break;
+				default:
+					document.querySelector("#mood-report").innerHTML = "Thanks for sharing your mood!";
+					break;
+			}
+		}
+
+		var userMood = getUserMood();
+		displayUserMood(userMood);
+	
+
+	</script>
+</body>
+</html>
