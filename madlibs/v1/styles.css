@@ -1,0 +1,242 @@
+/* CSS RESET*/
+*{
+	box-sizing: border-box;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1, h2, h3, p, ul, ol, a, button, label, input{
+	font-family: "Manrope",serif;
+	margin: 0;
+	padding: 0;
+}
+/* END RESET */
+
+/* body {background-color: #2C2638;} */
+
+
+#input-container {
+	display: flex;
+	gap: 50px;
+	margin-bottom: 24px;
+}
+
+#input-container > div {
+	width: 100%;
+}
+
+#image-container {
+	margin: 20px;
+	height: 95vh;
+	border-radius: 20px;
+	width: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('images/gradient.png');
+}
+
+/* ----- VISIBILITY CLASSES ----- */
+.hidden{
+	visibility: hidden;
+}
+
+.shown{
+	visibility: visible;
+}
+
+body {
+	margin: auto; 
+	background-color: #2C2638;
+}
+
+main {
+	margin: 14px 0 14px 0;	
+	margin: 20px 80px 0px 80px; 
+	width: 50%;
+}
+
+header {
+	margin: 24px 0 12px 0;
+}
+
+header h1{
+	color: white;
+	font-weight: 300;
+}
+
+header h2{
+	color: #C68FFF;
+	font-weight: 300;
+	font-size: 1em;
+	margin-bottom: 4px;
+}
+
+button {
+	font-size: 0.9em;
+	color: white;
+	background-color: #6D54B5;
+	border: none;
+	border-radius: 8px;
+	padding: 12px;
+	width: 100%;
+	transition: 200ms ease;
+}
+
+button:hover{
+	background-color: #8b72d3;
+}
+
+body {
+	display: flex;
+}
+
+
+/* ----- FORM STYLES ----- */
+
+label {
+	font-size: 0.8em;
+	color: white;
+	display: block;
+	margin: 16px 0 6px 0;
+}
+
+input {
+	color: white;
+	background-color: #3C364C;
+	border-radius: 8px;
+	border: none;
+	width: 100%;
+	height: 38px;
+	transition: 200ms ease;
+	padding-left: 10px;
+}
+
+input:hover {
+	background-color: #524c63
+}
+
+input[type="text"]:focus {
+    border: 1px solid #565067;
+    outline:#565067;
+}
+
+/* ----- OVERLAY STYLES ----- */
+
+#madlibs-overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#madlibs-overlay article {
+    overflow: scroll;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background-color:#fff;
+    padding: 20px;
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#resume{
+	display: flex;
+	max-width: 90%;
+	margin: 60px auto;
+	gap: 130px;
+}
+
+#resume h3{
+	font-size: 1em;
+	margin-bottom: 4px;
+	color: #6D54B5;
+}
+
+#resume p{
+	font-size: 1em;
+	margin-bottom: 2em;
+	line-height: 1.5em;
+}
+
+#resume-left-container{
+	flex: 1;
+}
+
+#resume-right-container{
+	flex: 1;
+}
+
+span {
+	font-weight: 700;
+}
+
+#banner{
+	display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers children */
+    align-items: center; /* Vertically centers children */
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 8.875rem;
+    background: linear-gradient(91deg, rgba(141, 111, 226, 0.96) -0.21%, rgba(45, 19, 119, 0.96) 99.07%);
+
+}
+
+#banner h1{
+	color: white;
+	font-size: 3em;
+	margin-bottom: 8px;
+}
+
+#banner h2{
+	color: #DBB8FF;
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+/* BUTTONS */
+#overlay-button-container {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+#cta-buttons{
+	margin: auto;
+	max-width: 40%;
+	text-align: center;
+}
+
+#cta-buttons h2{
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+#redo-button{
+	width: fit-content;
+}
+
+#download-button{
+	background-color: transparent;
+	color: #6D54B5;
+	width: auto;
+}
+
+#download-button:hover{
+	color: #9b85e0;
+}
