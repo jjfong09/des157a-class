@@ -26,7 +26,7 @@
 		<section id="madlibs-questions">
 			<header>
 				<h2>Kickstart your career</h2>
-				<h1>Build your new resume in minutes</h1>
+				<h1>Build your new resume in <span id="minutes-text">minutes</span></h1>
 			</header>
 	
 			<form>
@@ -37,101 +37,92 @@
 	
 						<label for="dreamJob">Dream Job</label>
 						<input type="text" id="dreamJob">
-	
-						<label for="adverb1">Adverb</label>
-						<input type="text" id="adverb1">
-	
+		
 						<label for="verb1">Verb ending in ing</label>
 						<input type="text" id="verb1">
+					
+						<label for="plural1">Plural Noun</label>
+						<input type="text" id="plural1">
+
+						<!-- motto -->
+						<label for="plural2">Plural Noun</label>
+						<input type="text" id="plural2">
 	
-						<label for="pluralNoun1">Plural Noun</label>
-						<input type="text" id="pluralNoun1">
-	
-						<label for="pluralNoun2">Plural Noun</label>
-						<input type="text" id="pluralNoun2">
-	
-						<label for="noun1">Fun Noun</label>
+						<label for="noun1">Noun</label>
 						<input type="text" id="noun1">
-	
-						<label for="country">Country</label>
-						<input type="text" id="country">
 					</div>
 	
 					<div>
-						<label for="noun2">Noun</label>
+						<label for="plural3">Plural Noun</label>
+						<input type="text" id="plural3">
+	
+						<label for="noun2">Fun Noun</label>
 						<input type="text" id="noun2">
+
+						<label for="noun3">Noun</label>
+						<input type="text" id="noun3">
 	
-						<label for="adjective1">Adjective</label>
-						<input type="text" id="adjective1">
-	
-						<label for="adjective2">Adjective</label>
-						<input type="text" id="adjective2">
-	
-						<label for="pluralNoun3">Plural Noun</label>
-						<input type="text" id="pluralNoun3">
-	
-						<label for="pluralNoun4">Plural Noun</label>
-						<input type="text" id="pluralNoun4">
+						<label for="adj1">Adjective</label>
+						<input type="text" id="adj1">
+		
+						<label for="plural4">Plural Noun</label>
+						<input type="text" id="plural4">
 	
 						<label for="number">Number</label>
 						<input type="number" id="number">
-	
-						<label for="pluralNoun5">Plural Noun</label>
-						<input type="text" id="pluralNoun5">
-	
-						<label for="noun3">Noun</label>
-						<input type="text" id="noun3">
 					</div>
 				</div> 
 				<!-- submit button -->
-				<button type="submit">Build My Resume Now</button>
+				<input id="submit-button" type="submit"value="Build My Resume Now">
 			</form>
 		</section>
 
-		<section id="madlibs-overlay" class="hidden">
-			<article>
+		<section id="madlibs-overlay" class="showing">
 
-				<section id="banner">
-					<div>
-						<h1>JESS FONG</h1>
-						<h2>Contact Me</h2>
-					</div>
-				</section>
+			<div id="overlay-content">
+			
+				<article id="resume-form">
+					<section id="banner">
+						<div>
+							<h1 id="name-input">JESS FONG</h1>
+							<h2>Contact Me</h2>
+						</div>
+					</section>
 
-				<section id="resume">
-					
-					<div id="resume-left-container">
-	
-						<h3>SUMMARY</h3>
-						<p>I am a innovative <span>DREAM JOB</span> known for my ability to <span>WORD</span> turn ordinary tasks into extraordinary achievements. With a passion for <span>WORD</span> and a love for <span>WORD</span>, I bring a(n) <span>WORD</span> vibe to every project.</p>
-	
-						<h3>EDUCATION</h3>
-						<p>University of California, Davis</p>
-	
-						<h3>Personal Motto</h3>
-						<p>The secret to happiness is <span>WORD</span> and well-placed <span>WORD</span></p>
-					</div>
-					
-					<div id="resume-right-container">
-						<h3>PROFESSIONAL EXPERIENCE</h3>
-						<p>Led a team of <span>WORD</span> to design the first viral <span>WORD</span> in <span>WORD</span></p>
+					<section id="resume">
+						
+						<div id="resume-left-container">
+							<h3>SUMMARY</h3>
+							<p>I am a innovative <span id="job-input"></span> known for my ability to efficiently turn ordinary tasks into extraordinary achievements. With a passion for <span id="verb1-input">WORD</span> and a love for <span id="plural1-input"></span>, I bring a lively vibe to every project.</p>
+		
+							<h3>EDUCATION</h3>
+							<p>University of California, Davis</p>
+		
+							<h3>Personal Motto</h3>
+							<p>The secret to happiness is <span id="plural2-input"></span> and well-placed <span id="noun1-input"></span></p>
+						</div>
+						
+						<div id="resume-right-container">
+							<h3>PROFESSIONAL EXPERIENCE</h3>
+							<p>Led a team of <span id="plural3-input">WORD</span>s, designers, engineers, and UX researachers, to design the first viral <span id="noun2-input">WORD</span> in the United States.</p>
 
-						<p>Launded a <span>WORD</span> by employing <span>WORD</span> methods with <span>WORD</span> results.</p>
+							<p>Launded a <span id="noun3-input">WORD</span> by leveraging agile methods and executing content strategy resutling in <span id="adj1-input">WORD</span> outcomes.</p>
 
-						<p>Delegated <span>WORD</span> to a team of <span>WORD</span> to boost profits by <span>WORD</span>%.</p>
-					</div>
+							<p>Delegated tasks to a team of <span id="plural4-input">WORD</span> utilizing cross-functional collaboration and stakeholder management to boost profits by <span id="num-input">WORD</span>%.</p>
+						</div>
+					</section>
+				</article>
 
-				</section>
-				
 				<footer id="cta-buttons">
-					<h2>Your new resume is here! 100% Job Offer Rate Guarentee!</h2>
+					<h2>Your <span>new resume</span> is here!</h2>
 					<div id="overlay-button-container">
 						<button id="download-button">Download</button>
 						<button id="redo-button">Build Another Resume</button>
 					</div>
 				</footer>
-				
-			</article>
+			</div>
+			
+			
 		</section>
 		
 	</main>
