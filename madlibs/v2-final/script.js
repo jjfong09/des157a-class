@@ -157,23 +157,23 @@
 		firstExp.innerHTML = firstExpText;
 		secondExp.innerHTML = secondExpText;
 		thirdExp.innerHTML = thirdExpText;
-		
+
+	
+		document.querySelector('#madlibs-overlay').className = 'showing';	
+
 		// reset fields
 		for(const eachField of formData){
 			eachField.value = '';
 		}
+
+		errorMessage.innerHTML = "";
 	}
 
 
 	// VISIBILITY CLASSES
-	document.querySelector('form').addEventListener('submit', function(e) {
-		e.preventDefault();
-		document.querySelector('#madlibs-overlay').className = 'showing';
-	});
-
     document.querySelector('#redo-button').addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector('#madlibs-overlay').className = 'hidden';
+        document.querySelector('#madlibs-overlay').className = 'hidden'
     });
 	
 })();
