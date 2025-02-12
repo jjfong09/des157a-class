@@ -7,7 +7,7 @@
 	// const madlib = document.querySelector('#madlibs-questions');
 	const formData = document.querySelectorAll('input[type=text]');
 
-	// vars for the fields
+	// vars for th fields
 	const name = document.querySelector('#name');
 	const intro = document.querySelector('#intro');
 	const motto = document.querySelector('#motto');
@@ -15,10 +15,13 @@
 	const secondExp = document.querySelector('#second-exp');
 	const thirdExp = document.querySelector('#third-exp');
 
+
+
 	// BUILDING MADLIBS OVERLAY
 	form.addEventListener("submit", function(e) {
 		e.preventDefault();
 		processFormData(formData);
+
 	});
 
 	function processFormData(formData) {
@@ -143,7 +146,7 @@
 	function makeMadLib(words){
 		const nameText = `<span>${words[0]}</span>`;
 		const introText = `I'm an innovative <span>${words[1]}</span> known for my ability to efficiently turn ordinary tasks into extraordinary achievements. With a passion for <span>${words[2]}</span> and a love for <span>${words[3]}</span>, I bring a lively vibe to every project.`;
-		const mottoText = `The secret to happiness is <span>${words[4]}</span> and well-placed <span>${words[5]}</span>.`;
+		const mottoText = `The secret to happiness is <span>${words[4]}</span> and well-placed <span>${words[5]}</span>`;
 		const firstExpText = `Led a team of <span>${words[6]}</span>s, designers, engineers, and UX researchers, to design the first viral <span>${words[7]}</span> in the United States.`;
 		const secondExpText = `Launched a <span>${words[8]}</span> by leveraging agile methods and executing content strategy resulting in <span>${words[9]}</span> outcomes.`;
 		const thirdExpText = `Delegated tasks to a team of <span>${words[10]}</span> utilizing cross-functional collaboration and stakeholder management to boost profits by <span>${words[11]}</span>%.`;
@@ -155,6 +158,11 @@
 		secondExp.innerHTML = secondExpText;
 		thirdExp.innerHTML = thirdExpText;
 		
+		document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			document.querySelector('#madlibs-overlay').className = 'showing';
+		});
+		
 		// reset fields
 		for(const eachField of formData){
 			eachField.value = '';
@@ -163,11 +171,7 @@
 
 
 	// VISIBILITY CLASSES
-	document.querySelector('form').addEventListener('submit', function(e) {
-		e.preventDefault();
-		document.querySelector('#madlibs-overlay').className = 'showing';
-	});
-	
+
     document.querySelector('#redo-button').addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector('#madlibs-overlay').className = 'hidden';
