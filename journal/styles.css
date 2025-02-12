@@ -15,7 +15,7 @@ img{
 	margin-bottom: 12px;
 }
 
-h1, h2, h3, p, ul, ol, a{
+h1, h2, h3, p, ul, ol, a, figcaption{
 	font-family: "Manrope",serif;
 	margin: 0;
 	padding: 0;
@@ -87,6 +87,14 @@ main{
 	gap: 64px;
 }
 
+figure {
+	margin: 0;
+	display: block;
+	margin-bottom: 6px;
+	color: #747e8b;
+	font-size: 0.8em;
+}
+
 .bold{
 	font-weight: 600;
 }
@@ -109,7 +117,7 @@ main{
 }
 
 #image-container img{
-	max-width: 49%;	
+	max-width: 50%;	
 }
 
 #crochet-img{
