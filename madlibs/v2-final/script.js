@@ -158,11 +158,6 @@
 		secondExp.innerHTML = secondExpText;
 		thirdExp.innerHTML = thirdExpText;
 		
-		document.querySelector('form').addEventListener('submit', function(e) {
-			e.preventDefault();
-			document.querySelector('#madlibs-overlay').className = 'showing';
-		});
-		
 		// reset fields
 		for(const eachField of formData){
 			eachField.value = '';
@@ -171,6 +166,10 @@
 
 
 	// VISIBILITY CLASSES
+	document.querySelector('form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		document.querySelector('#madlibs-overlay').className = 'showing';
+	});
 
     document.querySelector('#redo-button').addEventListener('click', function(e) {
         e.preventDefault();
