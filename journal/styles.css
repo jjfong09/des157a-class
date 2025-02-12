@@ -11,6 +11,8 @@ img{
 	width: 100%;
 	height: auto;
 	display: block;
+	border-radius: 6px;
+	margin-bottom: 12px;
 }
 
 h1, h2, h3, p, ul, ol, a{
@@ -85,6 +87,10 @@ main{
 	gap: 64px;
 }
 
+.bold{
+	font-weight: 600;
+}
+
 .link{
 	color: #6aa4fc; 
 	transition: color 300ms ease;
@@ -95,6 +101,19 @@ main{
 
 .link:hover svg {
 	transform: rotate(45deg);
+}
+
+#image-container{
+	display: flex;
+	gap: 12px;
+}
+
+#image-container img{
+	max-width: 49%;	
+}
+
+#crochet-img{
+	max-width: 300px;
 }
 
 #date-tag{
