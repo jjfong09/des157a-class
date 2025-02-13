@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	font-size: 2em;
+	font-family: Manrope;
+	color: #ffffff;
+	text-align: center;
+}
+
+main {
+	width: 80vw;
+	padding: 20px;
+	margin: auto;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+    align-items: center; 
+    justify-content: center; 
+	position: relative;
+	z-index: 2;
+}
+
+#sect2 h1 {
+	position: relative;
+  	top: 300px; /* Moves the h1 40px down within the section */
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+	z-index: 1;
+}
+
+h1 {
+	line-height: 1.2em;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: -200px;
+	left: 0;
+	overflow: shown;
+}
+
+figure img {
+	position: absolute;
+	transition: all 2s ease;
+	z-index: -2;
+}
+
+span{
+	color: #838383;
+}
+
+.sect1{
+	transform: scale(1);
+	width: 400vh;
+	top: 0;
+	left: 50%;
+	transform:translateX(-50%);
+}
+
+
+.sect2 {
+	width: 1000px;
+	top: 30%;
+	transform:translateX(-50%);
+	/* transform:translateY(20%); */
+}
