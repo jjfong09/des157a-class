@@ -25,20 +25,15 @@ section {
 	z-index: 2;
 }
 
-#sect2 h1 {
-	position: relative;
-  	top: 300px; /* Moves the h1 40px down within the section */
+#sect2 {
+	z-index: -5;
 }
 
-#overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,0.4);
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-	z-index: 1;
+#sect2 h1 {
+	position: relative;
+  	top: 300px; 
 }
+
 
 h1 {
 	line-height: 1.2em;
@@ -50,7 +45,7 @@ figure {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	top: -200px;
+	top: -160px;
 	left: 0;
 	overflow: shown;
 }
@@ -61,22 +56,26 @@ figure img {
 	z-index: -2;
 }
 
+.dark{
+	filter: brightness(50%);
+}
+
 span{
 	color: #838383;
 }
 
 .sect1{
 	transform: scale(1);
-	width: 400vh;
-	top: 0;
+	width: 250vh;
+	top: 50%;
 	left: 50%;
-	transform:translateX(-50%);
+	transform:translate(-50%, -40%);
 }
 
 
 .sect2 {
 	width: 1000px;
-	top: 30%;
-	transform:translateX(-50%);
-	/* transform:translateY(20%); */
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -40%);
 }
