@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Code V1</title>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+	<!-- manrope font weight light to semi bold-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap" rel="stylesheet">
+	
+	<link href = "styles.css" rel="stylesheet">
+
+	<script src="script.js" defer></script>
+
+</head>
+
+<body>
+	<div id="sheets-container">
+
+		<div class="img-wrapper">
+			<video id="flower-vid" loop>
+				<source src="images/flower.mp4" type="video/mp4">			
+			</video>
+
+			<img id="flower" src="images/fallinflower.png" draggable="false" class="rotate-left" >	
+
+			<p id = 'flower-tag'> Recorded on Feb 18, 2024</p>
+		</div>
+
+		<div class="img-wrapper">
+			<video id="blue-vid" loop>
+				<source src="images/blue.mp4" type="video/mp4">			
+			</video>
+
+			<img id="blue" src="images/blue.png" class="rotate-right draggable="false">
+
+			<p id = 'blue-tag'> Recorded on Feb 18, 2024</p>
+			
+		</div>
+
+		<div class="img-wrapper">
+			<video id="forever-vid" loop>
+				<source src="images/forever.mp4" type="video/mp4">			
+			</video>
+
+			<img id="forever" src="images/forever.png" draggable="false" class="rotate-left">
+
+			<p id = 'forever-tag'> Recorded on Feb 18, 2024</p>
+		</div>
+
+		<div class="img-wrapper">
+			<video id="silence-vid" loop>
+				<source src="images/silence.mp4" type="video/mp4">			
+			</video>
+
+			<img id="silence" src="images/whitesilence.png" draggable = "false" class="rotate-right">
+
+			<p id = 'silence-tag'> Recorded on Feb 18, 2024</p>
+		</div>
+
+	</div>
+
+	<p id="subtext">Try hovering over a piece of sheet music!</p>
+	
+</body>
+</html>

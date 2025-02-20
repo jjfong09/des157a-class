@@ -1,61 +1,84 @@
-// (function () {
-// 	'use strict';
+(function () {
+	'use strict';
 	
-// 	console.log('reading js');
+	console.log('reading js');
 
-// 	// ----- VARIABLES -----
-// 	const flower = document.querySelector('#flower');
-// 	const blue = document.querySelector('#blue');
-// 	const forever = document.querySelector('#forever');
-// 	const silence = document.querySelector('#silence');
+	// ----- VARIABLES -----
+	const flower = document.querySelector('#flower');
+	const blue = document.querySelector('#blue');
+	const forever = document.querySelector('#forever');
+	const silence = document.querySelector('#silence');
 
-// 	const sheets = [flower, blue, forever, silence];
-// 	console.log(sheets);
-
-// 	const sheetsContainer = document.querySelector("#sheets-container");
-
-// 	const wrapper = document.querySelectorAll("#img-wrapper");
+	const sheets = [flower, blue, forever, silence];
+	console.log(sheets);
 
 
-// 	// ----- EVENT LISTENERS -----
-// 	sheetsContainer.addEventListener('mouseover', function(event){
-// 		if (sheets.includes(event.target)){
-// 			resetRotate(event);
-// 			appearElement(event);
-// 		}
-// 	});
 
-// 	sheetsContainer.addEventListener('mouseleave', function(event){
-// 		if (sheets.includes(event.target)){
-// 			defaultState(event);
-// 		}
-// 	});
+	// ---------- MAIN EVENT LISTENER ----------
+	
+	const wrapper = document.querySelectorAll("#sheets-container .img-wrapper"); // get each wrapper within the container
 
+	wrapper.forEach(function (eachSheet) {
+		eachSheet.addEventListener('mouseover', focusSheet);
+		eachSheet.addEventListener('mouseout', defaultState);
+	});
 
-// 	// ----- FUNCTIONS -----
-// 	function resetRotate(event) {
-// 		console.log(`Hovered over: ${event.target.id}`);
-// 		event.target.classList.add('reset-rotate');
-// 	} 
-
-// 	function defaultState(event){
-// 		console.log(`Mouse left: ${event.target.id}`);
-// 		event.target.classList.remove('reset-rotate');
-// 	}
-
-// 	function appearElement(event) {
-// 		const id = event.target.id;
-// 		const respectiveVideo = document.querySelector(`#${id}-vid`);
-// 		const respectiveTag = document.querySelector(`#${id}-tag`);
+	// main function
+	function focusSheet(event){
+		resetRotate(event);
+		appearElement(event);
+		event.target.style.zIndex = "1";
+		playVideo(event);
+	}
 
 
-// 		if (respectiveVideo) {
-// 			respectiveVideo.style.opacity = 1;
-// 		}
+	// ---------- HELPER FUNCTIONS ----------
 
-// 		if (respectiveTag) {
-// 			respectiveTag.style.opacity = 1;
-// 		}
-// 	}
+	function defaultState(event){
+		// reset rotate
+		event.target.classList.remove('reset-rotate');
 
-// })();
+		// make elements disappear
+		const id = event.target.id;
+		const respectiveVideo = document.querySelector(`#${id}-vid`);
+		const respectiveTag = document.querySelector(`#${id}-tag`);
+		respectiveVideo.style.opacity = 0;
+		respectiveTag.style.opacity = 0;
+
+		// reset z-index
+		event.target.style.zIndex = "0";
+
+		// video
+		pauseVideo(event);
+	}
+
+	function resetRotate(event) {
+		console.log(`Hovered over: ${event.target.id}`);
+		event.target.classList.add('reset-rotate');
+	} 
+
+	function appearElement(event) {
+		const id = event.target.id;
+		const respectiveVideo = document.querySelector(`#${id}-vid`);
+		const respectiveTag = document.querySelector(`#${id}-tag`);
+
+		// make elements appear
+		respectiveVideo.style.opacity = 1;
+		respectiveTag.style.opacity = 1;
+	}
+
+	function playVideo(event) {
+		const id = event.target.id;
+		const video = document.querySelector(`#${id}-vid`);
+		video.autoplay = true;
+		video.play();
+	}
+
+	function pauseVideo(event) {
+		const id = event.target.id;
+		const video = document.querySelector(`#${id}-vid`);
+		video.pause(); 
+		video.currentTime = 0;
+	}
+
+})();
