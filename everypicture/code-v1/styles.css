@@ -25,7 +25,7 @@ img {
 	width: 100%;
 	height: auto;
 	border-radius: 1px;
-	margin: 0;
+	object-fit: cover;
 
 	box-shadow: -1px 10px 24px -11px rgba(0,0,0,0.23);
 }
@@ -45,12 +45,14 @@ img {
 /* ------------VIDEOS------------- */
 
 video {
+	aspect-ratio: 16 / 9;
 	object-fit: cover;
 	border-radius: 5px;
 	border: 2px solid rgb(141, 141, 141);
-
+	
 	width: 100%;
 	height: 180px;
+	opacity: 0;
 }
 
 #flower-vid{
@@ -83,6 +85,21 @@ video {
 
 .img-wrapper {
 	margin-left: -60px;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.img-wrapper p{
+	margin: 12px auto 0 auto;
+	background-color: rgb(244, 244, 244);
+	color: rgb(137, 136, 136);
+	border: 1px solid rgb(205, 205, 205);
+	padding: 4px 18px;
+	border-radius: 8px;
+	width: fit-content;
+	opacity: 0;
 }
 
 .hover-front {
@@ -100,4 +117,3 @@ video {
 .reset-rotate {
 	rotate: 0deg;
 }
-
