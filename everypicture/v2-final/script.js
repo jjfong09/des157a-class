@@ -13,7 +13,6 @@
 	console.log(sheets);
 
 
-
 	// ---------- MAIN EVENT LISTENER ----------
 	
 	const wrapper = document.querySelectorAll("#sheets-container .img-wrapper"); // get each wrapper within the container
