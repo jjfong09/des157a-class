@@ -15,9 +15,8 @@ h1, h2, h3, p, ul, ol, a, figcaption{
 /* ------------END RESET------------- */
 
 body{
-	/* background-image: url('images/bg.png'); */
 	background-image: url('images/bg.png');
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	overflow: hidden;
 }
 
@@ -33,7 +32,7 @@ h1, h2{
 h1{
 	font-family: "Unna", serif;
 	font-style: italic;
-	color: #5d5959;
+	color: #333030;
 	margin-bottom: 8px;
 }
 
@@ -49,10 +48,10 @@ footer{
 	font-family: "Unna", serif;
 	font-style: italic;
 	position: absolute;
-	font-size: 14px;
-	bottom: 2%;
+	font-size: 1em;
+	bottom: 2.5%;
 	left: 50%;
-	color: #8f8d8d;
+	color: #716f6f;
 	text-align: center;
 	transform:translate(-50%, -50%);
 }
@@ -76,8 +75,13 @@ footer{
 	transition: all 350ms ease, z-index 5ms;;
 }
 
+#sheets-container > div {
+	flex: 1;
+}
+
 #sheets-container img:hover{
 	transform: scale(1.05);
+	box-shadow: -1px 10px 30px -5px rgba(0, 0, 0, 0.55);
 }
 
 #sheets-container {
@@ -97,7 +101,7 @@ video {
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
 	border-radius: 5px;
-	border: 2px solid rgb(141, 141, 141);
+	border: 4px solid rgb(203, 203, 203);
 	
 	width: 100%;
 	height: 180px;
