@@ -171,15 +171,15 @@ video {
 }
 
 .rotate-right {
-	rotate: 5deg;
+	transform: rotate(5deg);
 }
 
 .rotate-left {
-	rotate: -5deg;
+	transform: rotate(-5deg);
 }
 
 .reset-rotate {
-	rotate: 0deg;
+	transform: rotate(0deg);
 }
 
 .bring-to-front {
