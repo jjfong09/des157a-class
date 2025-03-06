@@ -138,7 +138,7 @@ button:active {
 }
 
 /* ---------- HOW TO PLAY ----------- */
-.visible{
+.shown{
 	visibility: visible;
 }
 
