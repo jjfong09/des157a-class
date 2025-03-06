@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game On Design V1</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+
+	<link href = "styles.css" rel="stylesheet">
+
+	<script src="script.js" defer></script>
+
+</head>
+
+<body>
+	<header>
+		<h1>Hotstpring Hustle</h1>
+	</header>
+
+	<!-- HOW TO PLAY -->
+	<section id="overlay" class="hidden">
+		<article>
+			<h1>How To Play</h1>
+			<p>The game is simple! Two players take turns rolling the dice. Roll high, stack up points, and decide—keep going or play it safe? Roll a one, and your turn ends; Roll snake eyes (double ones), and your score resets to zero. <br><br> First to 30 points wins. Ready to roll?</p>
+			<button>Let's Play!</button>
+		</article>
+	</section>
+
+	<!-- CONTROLS -->
+	<div id="gamecontrol">
+		<button>music</button>
+		<button>question</button>
+	</div>
+
+	<!-- ACTION AREA -->
+	 <div id="actionarea">
+		<button id="startgame">Begin A New Game</button>
+	 </div>
+
+	<!--  MAIN GAME AREA -->
+	<section id="game">
+
+		<div id="playerone">
+			<div class="score-div">
+				<h2 class="player-text">Player 1 :</h2>
+				<h3 class="score-text" id="score1">02</h3>
+			</div>
+			<img id="p1-bucket" src="images/first.png" alt="bucket">
+		</div>
+
+		<div id="playertwo">
+			<div class="score-div">
+				<h2 class="player-text">Player 2 :</h2>
+				<h3 class="score-text" id="score2">21</h3>
+			</div>
+			<img id="p2-bucket" src="images/fifth.png" alt="bucket">
+		</div>
+
+	</section>
+	
+	<!-- PLAYING BUTTONS -->
+	<div id="actions"></div> 
+
+	<!-- OTHER -->
+	<img id="capybara" src="images/capybara.gif" src="capybara">
+	
+</body>
+</html>
