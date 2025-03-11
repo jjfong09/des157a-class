@@ -3,15 +3,23 @@
     console.log('reading JS');
 
 
-	// OVERLAY CONTROLS
-	const overlay = document.querySelector('#overlay');
+	// ----------------- OVERLAY CONTROLS -----------------
+    window.addEventListener('load', function () {
+        const overlay = document.querySelector('#overlay');
+        const dimmer = document.querySelector('#dimmer');
 
-	overlay.addEventListener('click', function(){
-		overlay.className = 'hidden'
-	});
+        setTimeout(function(){
+            overlay.className = 'shown';
+            dimmer.style.visibility = 'visible';
+        },500);
 
+	    overlay.addEventListener('click', function(){
+		    overlay.className = 'hidden';
+            dimmer.style.visibility = 'hidden';
+	    });
+    });
 
-	// GAME CONTROLS
+	// ----------------- GAME CONTROLS -----------------
 
     const startGame = document.querySelector('#startgame');
     const gameControl = document.querySelector('#gamecontrol');
@@ -48,6 +56,8 @@
 
         setUpTurn();
     });
+
+    // ----------------- GAME HELPER FUNCTIONS -----------------
 
     function setUpTurn(){
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;

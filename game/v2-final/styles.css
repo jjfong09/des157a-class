@@ -1,0 +1,232 @@
+/* CSS RESET*/
+*{
+	box-sizing: border-box;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+gif{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1, h2, h3, p, ul, ol, a, button, label, input{
+	font-family: "Gochi Hand", cursive;
+	margin: 0;
+	padding: 0;
+}
+/* END RESET */
+
+body {
+	background-color: #FBF9F3;
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+	color: #654021;
+	letter-spacing: 2px;
+}
+
+header h1{
+	padding-top: 60px;
+}
+
+/* ---------- GAME AREA ----------- */
+
+#game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 140px;
+
+	/* positioning */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+
+	/* color */
+	background-color: white;
+	padding: 50px 120px;
+	border-radius: 24px;
+	border: solid 3px #EDE7D6;
+}
+
+#game div{
+	align-items: center;
+}
+
+#game img{
+	width: 220px;
+	margin: auto;
+}
+
+/* ---------- SCORE ----------- */
+.score-div{
+	display: flex;
+	gap: 10px;
+	margin-bottom: 24px;
+	white-space: nowrap;
+}
+
+.player-text{
+	font-size: 2.5em;
+	color: #FBDCC3;
+	-webkit-text-stroke-width: 6px;
+	-webkit-text-stroke-color: #AF6A32;
+	paint-order: stroke fill;
+	letter-spacing: 3px;
+}
+
+.score-text { 
+	font-size: 3em;
+	color: #FBDCC3;
+	-webkit-text-stroke-width: 6px;
+	-webkit-text-stroke-color: #D8945E;
+	paint-order: stroke fill;
+	letter-spacing: 3px;
+
+	background-color: #F4E4D7;
+	padding: 2px 12px;
+	border-radius: 8px;
+}
+
+/* ---------- BUTTONS ----------- */
+button {
+	font-family: "Nunito", sans-serif;
+
+	border-radius: 40px;
+	padding: 12px 21px;
+	border: 2.5px solid #AF6A32;
+
+	background: #FBDCC3;
+	box-shadow: 0px 4.955px 0px 0px rgba(255, 255, 255, 0.49) inset;
+}
+
+button:hover{
+	background: #F5C8A4;
+	box-shadow: 0px 4px 0px 0px rgba(255, 255, 255, 0.49) inset;
+	border: 2.3px solid #AF6A32;
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+#actionarea{
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	transform:translate(-50%);
+
+}
+#gamecontrol{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+/* ---------- HOW TO PLAY ----------- */
+#overlay.shown{
+    opacity: 1;
+    visibility: visible;
+    animation: popIn 0.5s ease-out forwards; /* Apply pop animation */
+}
+
+#overlay.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#dimmer {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+    height: 100vh;
+	position: absolute;
+	top: 0%;
+	z-index: 9998;
+	visibility: hidden;
+}
+
+#overlay {
+	/* background-color: rgba(0, 0, 0, 0.5); */
+    width: 100vw;
+    height: 100vh;
+	position: absolute;
+	top: 0%;
+ 	z-index: 9999;
+	
+	opacity: 0;
+    visibility: hidden;
+	transform: translate(-50%, -50%) scale(0.5);
+	transform-origin: center;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start small */
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1); /* Slightly overshoot for pop effect */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Settle back to normal size */
+    }
+}
+
+#overlay article{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	border-radius: 24px;
+
+	background-color: white;
+	padding: 40px 120px;
+	border: solid 3px #EDE7D6;
+	z-index: 9999;
+}
+
+#overlay article h1{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#overlay article p{
+	font-family: "Nunito", sans-serif;
+	color: #654021;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+#overlay article button{
+	width: fit-content;
+}
+
+/* ---------- OTHER ----------- */
+
+#capybara {
+	position: absolute;
+	width: 350px;
+	right: -30px;
+	bottom: -60px;
+}
