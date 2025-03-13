@@ -102,7 +102,11 @@ svg {
 
 #gameArea img{
 	width: 220px;
-	margin: auto;
+	margin: 24px;
+}
+
+.game-text-js {
+	width: fit-content;
 }
 
 /* ---------- SCORE ----------- */
@@ -148,6 +152,7 @@ svg {
 /* ---------- BUTTONS ----------- */
 button {
 	font-family: "Nunito", sans-serif;
+	color: #654021;
 
 	border-radius: 40px;
 	padding: 12px 21px;
@@ -277,7 +282,7 @@ button:active {
 	border-radius: 16px;
 	border: solid 3px #EDE7D6;
 	text-wrap: wrap;
-	max-width: 250px;
+	max-width: 200px;
 }
 
 #game p {
@@ -319,11 +324,17 @@ button:active {
 	visibility: visible;
 }
 
-img {
+#capybara {
 	width: 90%;
 	height: auto;
 	display: block;
 	/* visibility: hidden; */
+}
+
+.dice {
+	/* dice */
+	width: 40%;
+	margin-top: 12px;
 }
 
 .js-text{

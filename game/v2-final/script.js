@@ -93,9 +93,9 @@
     const gameWrapper = document.querySelector('#game-wrapper');
 
     const gameData = {
-        dice: ['1die.jpg', '2die.jpg', '3die.jpg', 
-               '4die.jpg', '5die.jpg', '6die.jpg'],
-        players: ['player 1', 'player 2'],
+        dice: ['1die.png', '2die.png', '3die.png', 
+               '4die.png', '5die.png', '6die.png'],
+        players: ['Player 1', 'Player 2'],
         score: [0, 0],
         roll1: 0,
         roll2: 0,
@@ -124,7 +124,7 @@
     // ----------------- GAME HELPER FUNCTIONS -----------------
 
     function setUpTurn(){
-        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+        game.innerHTML = `<p class="game-text-js" >Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
         gameWrapper.className = "visible"
 
@@ -141,8 +141,8 @@
         console.log(gameData.roll1);
         console.log(gameData.roll2);
 
-        game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}</p>`;
-        // game.innerHTML += `<img src="images/${gameData.dice[gameData.roll1-1]}"> <img src="images/${gameData.dice[gameData.roll2-1]}">`;
+        game.innerHTML = `<p class="game-text-js">Roll the dice for ${gameData.players[gameData.index]}</p>`;
+        game.innerHTML += `<img class="dice" src="images/${gameData.dice[gameData.roll1-1]}"> <img class="dice" src="images/${gameData.dice[gameData.roll2-1]}">`;
         gameData.rollSum = gameData.roll1 + gameData.roll2; // calc sum
         console.log(gameData.rollSum);
 
@@ -155,7 +155,7 @@
          // if two 1's are rolled 
          if (gameData.rollSum === 2) {
             console.log('snake eyes');
-            game.innerHTML = '<p>Oh no snake eyes!</p>';
+            game.innerHTML += '<p class="game-text-js">Oh no snake eyes!</p>';
 
             // zero out score
             gameData.score[gameData.index] = 0;
@@ -174,7 +174,7 @@
        else if (gameData.roll1 === 1 || gameData.roll2 === 1 ) {
             console.log('one of the two dice is a 1');
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML = `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p class="game-text-js">Oh no! One of your rolls was a one, It's ${gameData.players[gameData.index]}'s turn now.</p>`;
             setTimeout(setUpTurn,2000);
         }
 
