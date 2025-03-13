@@ -7,19 +7,13 @@ nav ul, nav ol {
 	list-style-type: none;
 }
 
-img{
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
 gif{
 	width: 100%;
 	height: auto;
 	display: block;
 }
 
-h1, h2, h3, p, ul, ol, a, button, label, input{
+h1, h2, h3, h4, p, ul, ol, a, button, label, input{
 	font-family: "Gochi Hand", cursive;
 	margin: 0;
 	padding: 0;
@@ -34,17 +28,56 @@ body {
 h1 {
 	text-align: center;
 	font-size: 3em;
-	color: #654021;
-	letter-spacing: 2px;
+	letter-spacing: 3.5px;
+	/* color: #654021; */
+
+	color: #FBDCC3;
+	-webkit-text-stroke-width: 7px;
+	-webkit-text-stroke-color: #AF6A32;
+	paint-order: stroke fill;
 }
 
-header h1{
-	padding-top: 60px;
+header {
+	display: flex;
+	gap: 8px;
+	margin: auto;
+	justify-content: center;
+	margin-top: 60px;
+	align-items: center;
 }
 
-/* ---------- GAME AREA ----------- */
+#orange-gif {
+	width: 70px;
+	height: 70px;
+}
 
-#game {
+svg {
+	width: 40px;
+	height: 40px;
+}
+
+#gamecontrol .icon-button{
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 45px;
+	height: 45px;
+	justify-content: center;
+	align-items: center;
+}
+
+#gamecontrol{
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+
+/* ---------- gameArea AREA ----------- */
+
+#gameArea {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,22 +91,23 @@ header h1{
 
 	/* color */
 	background-color: white;
-	padding: 50px 120px;
+	padding: 50px 70px;
 	border-radius: 24px;
 	border: solid 3px #EDE7D6;
 }
 
-#game div{
+#gameArea div{
 	align-items: center;
 }
 
-#game img{
+#gameArea img{
 	width: 220px;
 	margin: auto;
 }
 
 /* ---------- SCORE ----------- */
 .score-div{
+	flex: 1;
 	display: flex;
 	gap: 10px;
 	margin-bottom: 24px;
@@ -82,24 +116,33 @@ header h1{
 
 .player-text{
 	font-size: 2.5em;
+	letter-spacing: 3px;
+	/* color: #654021; */
+
 	color: #FBDCC3;
 	-webkit-text-stroke-width: 6px;
 	-webkit-text-stroke-color: #AF6A32;
 	paint-order: stroke fill;
-	letter-spacing: 3px;
+	
 }
 
 .score-text { 
 	font-size: 3em;
+	letter-spacing: 3px;
+	/* color: #654021; */
+
 	color: #FBDCC3;
 	-webkit-text-stroke-width: 6px;
 	-webkit-text-stroke-color: #D8945E;
 	paint-order: stroke fill;
-	letter-spacing: 3px;
 
 	background-color: #F4E4D7;
 	padding: 2px 12px;
 	border-radius: 8px;
+
+	width: 80px;
+	text-align: center;
+	justify-content: center;
 }
 
 /* ---------- BUTTONS ----------- */
@@ -124,17 +167,20 @@ button:active {
     transform: scale(0.98); 
 }
 
-#actionarea{
+#actionArea{
 	position: absolute;
 	bottom: 60px;
 	left: 50%;
 	transform:translate(-50%);
-
 }
-#gamecontrol{
-	position: absolute;
-	top: 30px;
-	left: 30px;
+
+#actionArea button {
+	margin: 8px;
+}
+
+#actionArea p {
+	font-family: "Nunito", sans-serif;
+	margin-bottom: 10px;
 }
 
 /* ---------- HOW TO PLAY ----------- */
@@ -161,7 +207,6 @@ button:active {
 }
 
 #overlay {
-	/* background-color: rgba(0, 0, 0, 0.5); */
     width: 100vw;
     height: 100vh;
 	position: absolute;
@@ -177,15 +222,15 @@ button:active {
 @keyframes popIn {
     0% {
         opacity: 0;
-        transform: scale(0.5); /* Start small */
+        transform: scale(0.5); 
     }
     70% {
         opacity: 1;
-        transform: scale(1.1); /* Slightly overshoot for pop effect */
+        transform: scale(1.1);
     }
     100% {
         opacity: 1;
-        transform: scale(1); /* Settle back to normal size */
+        transform: scale(1); 
     }
 }
 
@@ -222,11 +267,65 @@ button:active {
 	width: fit-content;
 }
 
-/* ---------- OTHER ----------- */
 
-#capybara {
+/* ---------- GAME + CAPYBARA ----------- */
+#game {
+	font-size: 14px;
+	background-color: #ffffff;
+	width: fit-content;
+	padding: 16px;
+	border-radius: 16px;
+	border: solid 3px #EDE7D6;
+	text-wrap: wrap;
+	max-width: 250px;
+}
+
+#game p {
+	font-family: "Nunito", sans-serif;
+}
+
+#game-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+#name {
+	font-family: "Nunito", sans-serif;
+	font-size: 14px;
+	width: fit-content;
+	background-color: #AF6A32;
+	color: white;
+	padding: 4px 6px;
+	border-radius: 8px;
+}
+
+#capybara-wrapper {
 	position: absolute;
 	width: 350px;
-	right: -30px;
-	bottom: -60px;
+	right: -70px;
+	bottom: -45px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+img {
+	width: 90%;
+	height: auto;
+	display: block;
+	/* visibility: hidden; */
+}
+
+.js-text{
+	font-family: "Nunito", sans-serif;
 }
