@@ -10,6 +10,12 @@
     const score = new Audio('audio/pop.mp3');
     const win = new Audio('audio/winning.mp3');
 
+    // ----------------- OTHER VARIABLES -----------------
+    const controlButtons = document.querySelectorAll('#gamecontrol button');
+    // Select all buttons
+    const overlayButton = document.querySelector('#overlay button');
+    const startButton = document.querySelector('#startGame');
+
 
     function scoreSound() {
         score.play();
@@ -37,10 +43,6 @@
         click.volume = 0.5;
     }
 
-    // Select all buttons
-    const overlayButton = document.querySelector('#overlay button');
-    const startButton = document.querySelector('#startGame');
-
     function handleClick() {
         clickSound();
     };
@@ -53,11 +55,11 @@
     // open overlay for info icon
     const volume = document.querySelector('#volume');
     const info = document.querySelector('#info');
+    const overlay = document.querySelector('#overlay');
+    const dimmer = document.querySelector('#dimmer');
+
 
     info.addEventListener('click', function() {
-        const overlay = document.querySelector('#overlay');
-        const dimmer = document.querySelector('#dimmer');
-
         pop.play();
         overlay.className = 'shown';
         dimmer.style.visibility = 'visible';
@@ -65,9 +67,6 @@
 
     // ----------------- OVERLAY CONTROLS -----------------
     window.addEventListener('load', function () {
-        const overlay = document.querySelector('#overlay');
-        const dimmer = document.querySelector('#dimmer');
-
         setTimeout(function(){
             overlay.className = 'shown';
             dimmer.style.visibility = 'visible';    
@@ -241,23 +240,35 @@
             // Empty bucket (1)
             bucketImage.src = 'images/first.png';
         }
-    }
-
-  
-
-    // const controlButtons = document.querySelectorAll('#gamecontrol button');
+    }    
 
     // controlButtons.forEach(button => {
     //     button.addEventListener('click', function(){
     //         if (button.id === 'volume') {
     //             volume.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#AF6A32" viewBox="0 0 256 256"><path d="M165.27,21.22a12,12,0,0,0-12.64,1.31L83.88,76H40A20,20,0,0,0,20,96v64a20,20,0,0,0,20,20H83.88l68.75,53.47A12,12,0,0,0,172,224V32A12,12,0,0,0,165.27,21.22ZM148,199.46,95.37,158.53A12,12,0,0,0,88,156H44V100H88a12,12,0,0,0,7.37-2.53L148,56.54ZM212,104v48a12,12,0,0,1-24,0V104a12,12,0,0,1,24,0Z"></path></svg>'
                 
-    //         } else if (button.id === 'info') {
-    //             // open overlay
     //         }
     //     });
     // });
     
+
+    const myVolume = document.querySelector('#volume');
+
+    // add code for toggle switch for bg
+    myVolume.addEventListener('click', function() {
+        console.log('volume change');
+        if(isPlaying) { // mute
+            bg.pause();
+            volume.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#654021" viewBox="0 0 256 256"><path d="M165.27,21.22a12,12,0,0,0-12.64,1.31L83.88,76H40A20,20,0,0,0,20,96v64a20,20,0,0,0,20,20H83.88l68.75,53.47A12,12,0,0,0,172,224V32A12,12,0,0,0,165.27,21.22ZM148,199.47,95.37,158.53A12,12,0,0,0,88,156H44V100H88a12,12,0,0,0,7.37-2.53L148,56.54Zm108.49-55.95a12,12,0,0,1-17,17L224,145l-15.51,15.52a12,12,0,0,1-17-17L207,128l-15.52-15.51a12,12,0,0,1,17-17L224,111l15.51-15.51a12,12,0,0,1,17,17L241,128Z"></path></svg>'
+
+            
+        } else { // play music
+            bg.play(); 
+            volume.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#654021" viewBox="0 0 256 256"><path d="M165.27,21.22a12,12,0,0,0-12.64,1.31L83.88,76H40A20,20,0,0,0,20,96v64a20,20,0,0,0,20,20H83.88l68.75,53.47A12,12,0,0,0,172,224V32A12,12,0,0,0,165.27,21.22ZM148,199.47,95.37,158.53A12,12,0,0,0,88,156H44V100H88a12,12,0,0,0,7.37-2.53L148,56.54ZM212,104v48a12,12,0,0,1-24,0V104a12,12,0,0,1,24,0Zm36-16v80a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path></svg>'
+        }
+        // toggle the switch of playing
+        isPlaying = !isPlaying;
+    });
    
 
 })();

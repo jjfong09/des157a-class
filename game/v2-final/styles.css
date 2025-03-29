@@ -197,6 +197,7 @@ button:active {
 
 #overlay.hidden{
     opacity: 0;
+	display: none;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
 }
